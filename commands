@@ -1,0 +1,10 @@
+ON ANY CHANGE TO MODELS.PY (methods not needed)
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+ACCESS SHELL --> access models
+python3 manage.py shell
+
+RUNSERVER --> same as docker-compose up
+python3 manage.py runserver
