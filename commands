@@ -10,25 +10,5 @@ docker-compose run web python3 manage.py shell
 RUNSERVER --> same as docker-compose up
 python3 manage.py runserver
 
-import os
-
-if os.environ.get("DOCKER") and  == "true":
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'postgres',
-            'USER': 'postgres',
-            'HOST': 'db',
-            'PORT': 5432,
-        }
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'postgres',
-            'USER': 'postgres',
-            'HOST': 'local',
-            'PORT': 5432,
-        }
-    }
+docker-compose run web pip3 install -r requirements.txt
+docker exec -it renusearch_web_1 bash
