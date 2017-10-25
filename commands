@@ -1,5 +1,6 @@
 ON ANY CHANGE TO MODELS.PY (methods not needed)
 
+docker-compose run web python3 manage.py makemigrations
 python3 manage.py makemigrations
 python3 manage.py migrate
 
