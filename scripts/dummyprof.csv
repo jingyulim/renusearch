@@ -1,0 +1,11 @@
+persNo,firstName,lastName,faculty,department,position,numPubs,numCitations,hIndex
+1,Potato,Goh,Science,BIOL SCI,Professor,25,10,11
+2,Carrot,Tan,Science,CHEM,Professor,30,11,12
+3,Cabbage,Lee,Science,MATH,Professor,35,12,13
+4,Egg,Lim,Science,STATS & AP,Assoc Professor,40,13,15
+5,Apple,Poh,Science,PHYS,Assoc Professor,45,14,14
+6,Orange,Tow,Engineering,BME,Professor,50,15,5
+7,Banana,See,Engineering,MSE,Professor,55,16,11
+8,Milk,Huang,Engineering,MECH,Professor,60,17,9
+9,Cereal,Sim,Engineering,CEE,Assoc Professor,65,18,7
+10,Bee Hoon,Koh,Engineering,MATE,Assoc Professor,70,19,17
