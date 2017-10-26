@@ -9,6 +9,7 @@ cycler==0.10.0
 decorator==4.1.2
 dj-database-url==0.4.2
 Django==1.11.3
+django-extensions==1.9.6
 docutils==0.14
 entrypoints==0.2.3
 gunicorn==19.7.1
@@ -53,4 +54,3 @@ traitlets==4.3.2
 wcwidth==0.1.7
 ipython
 whitenoise==3.3.0
-django-extensions==1.9.6
