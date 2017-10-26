@@ -16,9 +16,7 @@ Including another URLconf
 
 from django.conf.urls import url
 from capstone.views import index
-from capstone.views import tomato
 
 urlpatterns = [
-    url(r'^$', index, name='index'),
-    url(r'^dashboard',tomato)
+    url(r'^$', index, name='index')
 ]
