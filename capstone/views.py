@@ -25,7 +25,7 @@ def researcherChanges(request):
 def researcherVerified(request):
  return render(request, "researcherVerified.html")
 
-# officer search 
+# officer search
 def officerResearcherProfile(request):
  params = request.GET # possibly add researcher?
  persNum = params["persNo"] # assuming persNo is the ID (check models.py)
