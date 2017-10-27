@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>ReNUSearch</title>
+  <!-- Bootstrap core CSS-->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="static/css/sb-admin.css" rel="stylesheet">
+  <link href="static/css/number.css" rel="stylesheet">
+  <!-- Bootstrap Select DropDown CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/css/bootstrap-select.min.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="user.html">Re<span class="nus">NUS</span>earch</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+<!-- LIU JIE IS NOT ADDED YET -->
+<!--
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="userMain.html">
+            <button type="button" class="btn btn-secondary btn-block">
+              <i class="fa fa-graduation-cap"></i>
+              <span class="nav-link-text">LIU JIE</span>
+            </button>
+          </a>
+        </li>
+-->
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <a class="nav-link" href="addresearcher.html">
+            <div style="text-align:center">
+              <i class="fa fa-plus"></i>
+              <span class="nav-link-text">Add Researcher</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+
+
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+
+
+        <!-- Top right of dashboard -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mr-lg-2" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user-circle-o"></i>
+              <span class="name">Cindy Tay
+              </span>
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Change Password</a>
+              <a class="dropdown-item" href="#">Report Issues</a>
+            </div>
+          </li>
+
+<!--Logput button -->
+
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-danger btn-sm">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="userMain.html">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">ADD RESEARCHER</li>
+      </ol>
+      <div class="row">
+
+
+        <div class="container">
+          <div class="card card-login mx-auto mt-5" style="height: 400px;">
+  <!--  <div class="card-header">ADD RESEARCHER</div> -->
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label for="textbox">NAME OF RESEARCHER</label>
+                  <input class="form-control" id="textbox" type="text" placeholder="Enter name" required="" aria-describedby="usernameHelp">
+                    <small id="usernameHelp" class="form-text text-muted" style="color:#ff0000">*compulsory</small>
+                </div>
+
+                <div class="category_div" id="category_div" >FACULTY
+                    <select class="form-control" id="source" name="source" placeholder="Select Faculty" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                    <option value="">Select Faculty</option>
+                    <option value="SCIENCE">SCIENCE</option>
+                    <option value="ENGINEERING">ENGINEERING</option>
+                    </select>
+                </div>
+<br/>
+
+                <div class="sub_category_div" id="sub_category_div">DEPARTMENT
+
+                    <script type="text/javascript" language="JavaScript">
+                    document.write('<select name="status" id="status" class="form-control" placeholder="Select Department"><option value="">Select Department</option></select>')
+                    </script>
+                    <noscript>
+                      <select id="status" name="status">
+                        <option value="Biological Science">Biological Science</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Chemistry">Mathematics</option>
+                        <option value="Chemistry">Pharmacy</option>
+                        <option value="Chemistry">Physics</option>
+                        <option value="Chemistry">Statistics & Applied Math</option>
+
+                      </select>
+                    </noscript>
+
+                </div>
+
+
+<br />
+                  <a href=# class="btn btn-info" role="button" onclick="onSubmit()">Submit</a>
+              <!--    <button type="submit" class="btn btn-primary" href="user.html">Submit</button> -->
+                </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+
+
+<!--nothing
+        <div class="col-12">
+          <h1>Blank</h1>
+          <p>This is an example of a blank page that you can use as a starting point for creating new ones.</p>
+        </div>
+      </div>
+    </div>
+-->
+
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © NUS School of Computing 2017</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/popper/popper.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="static/js/sb-admin.min.js"></script>
+    <!-- Bootstrap select JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/js/bootstrap-select.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+
+    <!-- add your own -->
+<!--
+   <script>
+      $(document).ready(function(){
+        $("#facultyMenu a").click(function(){
+          var selText = $(this).text();
+          $("#faculty").text(selText);
+        //  $("#faculty").text($(this).text());
+        });
+      });
+
+      $(document).ready(function(){
+        $("#subjareaMenu a").click(function(){
+          var selText = $(this).text();
+          $("#subjarea").text(selText);
+        //  $("#faculty").text($(this).text());
+        });
+      });
+
+
+      $(document).ready(function(){
+        $(".dropdown-menu li a").click(function(){
+        $("#subjarea").text($(this).value());
+        });
+      });
+
+    </script>
+-->
+
+  <script>
+  function onSubmit() {
+    if (document.getElementById('textbox').value == 'Liu Jie' && document.getElementById('source').options[document.getElementById('source').selectedIndex].text == 'SCIENCE' && document.getElementById('status').options[document.getElementById('status').selectedIndex].text == 'Mathematics')  {
+      document.location.href = "userMain.html";
+    } else {
+      document.location.href = "searchedresults.html";
+    }
+
+  }
+  </script>
+
+
+    <script>
+      function validateTextBox() {
+        if (document.getElementById("textbox").value != "") {} else {
+          alert("Please enter a value");
+        }
+      }
+    </script>
+
+
+    <script>
+    function dynamicdropdown(listindex)
+    {
+      switch (listindex)
+      {
+        case "SCIENCE" :
+          document.getElementById("status").options[0] = new Option("Select Department", "");
+          document.getElementById("status").options[1] = new Option("Biological Science", "Biological Science");
+          document.getElementById("status").options[2] = new Option("Chemistry", "Chemistry");
+          document.getElementById("status").options[3] = new Option("Mathematics", "Mathematics");
+          document.getElementById("status").options[4] = new Option("Pharmacy", "Pharmacy");
+          document.getElementById("status").options[5] = new Option("Physics", "Physics");
+          document.getElementById("status").options[6] = new Option("Statistics & Applied Math", "Statistics & Applied Math");
+
+          break;
+
+        case "ENGINEERING" :
+          document.getElementById("status").options[0] = new Option("Select Department", "");
+          document.getElementById("status").options[1] = new Option("Biolmedical Engineering", "Biomedical Engineering");
+          document.getElementById("status").options[2] = new Option("Civil & Environmental Engineering", "Civil & Environmental Engineering");
+          document.getElementById("status").options[3] = new Option("Chemical Engineering", "Chemical Engineering");
+          document.getElementById("status").options[4] = new Option("Electronic & Computer Engineering", "Electronic & Computer Engineering");
+          document.getElementById("status").options[5] = new Option("Industrial Systems and Material Engineering", "Industrial Systems and Material Engineering");
+          document.getElementById("status").options[6] = new Option("Mechanical Engineering", "Mechanical Engineering");
+          document.getElementById("status").options[7] = new Option("Material Science Engineering", "Material Science Engineering");
+
+          break;
+        }
+        return true;
+
+    }
+
+    </script>
+
+
+
+
+<!--
+    <script>
+      function validateFaculty()) {
+        if (document.getElementById("facultyMenu").value != "Faculty") {} else {
+          alert("Please choose a faculty");
+        }
+      }
+    </script>
+-->
+
+<!--
+    <script>
+
+    var dropdowns = $(".dropdown2");
+
+    // Onclick on a dropdown, toggle visibility
+    dropdowns.find("dt").click(function(){
+    	dropdowns.find("dd ul").hide();
+    	$(this).next().children().toggle();
+    });
+
+    // Clic handler for dropdown
+    dropdowns.find("dd ul li a").click(function(){
+    	var leSpan = $(this).parents(".dropdown2").find("dt a span");
+
+    	// Remove selected class
+    	$(this).parents(".dropdown2").find('dd a').each(function(){
+        $(this).removeClass('selected');
+      });
+
+    	// Update selected value
+    	leSpan.html($(this).html());
+
+    	// If back to default, remove selected class else addclass on right element
+    	if($(this).hasClass('default')){
+        leSpan.removeClass('selected')
+      }
+    	else{
+    		leSpan.addClass('selected');
+    		$(this).addClass('selected');
+    	}
+
+    	// Close dropdown
+    	$(this).parents("ul").hide();
+    });
+
+    // Close all dropdown onclick on another element
+    $(document).bind('click', function(e){
+    	if (! $(e.target).parents().hasClass("dropdown2")) $(".dropdown2 dd ul").hide();
+    });
+
+
+    </script>
+
+-->
+
+</body>
+
+</html>
