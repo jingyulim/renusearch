@@ -15,8 +15,17 @@ Including another URLconf
 """
 
 from django.conf.urls import url
-from capstone.views import index
+from capstone.views import *
 
 urlpatterns = [
-    url(r'^$', index, name='index')
+    # for login
+    url(r'^$', index, name='index'),
+    url(r'^login', login),
+    url(r'^forgot-password', forgotPwd),
+    url(r'^addresearcher', addResearcher),
+    url(r'^researcher', researcher),
+
+    # for researchers
+    url(r'^changes', researcherChanges),
+    url(r'^verified', researcherVerified)
 ]
