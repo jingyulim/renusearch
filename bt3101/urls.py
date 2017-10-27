@@ -15,7 +15,6 @@ Including another URLconf
 """
 
 from django.conf.urls import url
-<<<<<<< HEAD
 from capstone.views import *
 
 urlpatterns = [
@@ -29,10 +28,4 @@ urlpatterns = [
     # for researchers
     url(r'^changes', researcherChanges),
     url(r'^verified', researcherVerified)
-=======
-from capstone.views import index
-
-urlpatterns = [
-    url(r'^$', index, name='index')
->>>>>>> master
 ]
