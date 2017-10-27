@@ -1,14 +1,42 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from capstone.models import *
 
+# login
 def index(request):
- return HttpResponse("hello! this is our app")
-# Create your views here.
+ return render(request, "login.html")
 
+def login(request):
+ return render(request, "login.html")
 
-def tomato(request):
- params = request.GET
- name = params["scopus_name"]
- ## get their information
+def forgotPwd(request):
+ return render(request, "forgot-password.html")
 
- return HttpResponse("{}".format(dict(params)))
+def researcher(request):
+ return render(request, "researcher.html")
+
+def addResearcher(request):
+ return render(request, "addresearcher.html")
+
+# researcher profile
+def researcherChanges(request):
+ return render(request, "researcherChanges.html")
+
+def researcherVerified(request):
+ return render(request, "researcherVerified.html")
+
+# officer search 
+def officerResearcherProfile(request):
+ params = request.GET # possibly add researcher?
+ persNum = params["persNo"] # assuming persNo is the ID (check models.py)
+
+ # get researcher metrics by persNo
+ researchers = Reseacher.objects.filter(fieldname="persNo")
+ profile = researchers.values(persNum)
+
+ # get researcher pubs
+ pubs = Publication.objects.filter(researcher__in=[persNum]) # need to filter by id in researcher table
+ profile["pubs"] = pubs.values()  # add pubs to profiles. {{pubs}} in front end?
+
+ context = dict(profile) # convert profiles list to dict to render?
+ return HttpResponse(template.render(request, "userMain.html", context))
