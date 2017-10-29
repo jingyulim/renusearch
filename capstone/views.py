@@ -69,3 +69,4 @@ def officerResearcherProfile(request, persNo):
 
 	context = dict(profile) # convert profiles list to dict to render?
 	return HttpResponse(template.render(request, "userMain.html", context))
+
