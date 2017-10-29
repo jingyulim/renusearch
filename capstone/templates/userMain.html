@@ -31,16 +31,18 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="userMain.html">
+          {% for res in researcher %}
+          <a class="nav-link" href=#>
             <button type="button" class="btn btn-secondary btn-block">
               <i class="fa fa-graduation-cap"></i>
-              <span class="nav-link-text">LIU JIE</span>
+              <span class="nav-link-text">{{res.name}}</span>
             </button>
           </a>
+          {% endfor %}
         </li>
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="addresearcherzl.html">
+          <a class="nav-link" href="{% url 'search' %}">
             <div style="text-align:center">
               <i class="fa fa-plus"></i>
               <span class="nav-link-text">Add Researcher</span>
@@ -79,11 +81,13 @@
       <!-- Header of researcher profile -->
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
+        {% for res in researcher %}
         <li class="breadcrumb-item">
-          <h1>{{researcher.name}}</h1>
-          <p>{{researcher.position}}<br>
-            {{researcher.department}}</p>
+          <h1>{{res.name}}</h1>
+          <p>{{res.position}}<br>
+            Department of {{res.department}}</p>
         </li>
+        {% endfor %}
       </ol>
 
       <!-- Research Metrics -->
@@ -152,7 +156,7 @@
                 </tr>
               </thead>
               <tbody>
-                {% for pub in pubs %}
+                {% for pub in publications %}
                 <tr>
                   <td>{{ pub.title }}</td>
     				      <td>{{ pub.year }}</td>
@@ -192,7 +196,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login">Logout</a>
+            <a class="btn btn-primary" href="{% url 'login' %}">Logout</a>
           </div>
         </div>
       </div>

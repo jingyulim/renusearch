@@ -34,9 +34,6 @@ def searchResult(request, faculty=None, department=None):
 		res['validation'] = "invalid"
 	return render(request, "search.html", res)
 
-def usermain(request):
-	return render(request, "userMain.html")
-
 # researcher profile
 def researcherChanges(request):
 	return render(request, "researcherChanges.html")
@@ -46,8 +43,13 @@ def researcherVerified(request):
 
 # officer search
 def officerResearcherProfile(request, persNo):
-	# get researcher metrics by persNo
-	researcher = Reseacher.objects.filter(persNo=persNo)
-	# get researcher pubs
-	pubs = Publication.objects.filter(researcher__in=[persNo]) 
-	return HttpResponse(template.render(request, "userMain.html", researcher, pubs))
+	profile = {}
+	# get researcher object by persNo
+	researcher = Researcher.objects.filter(persNo=persNo)
+	profile["researcher"] = researcher
+	# get researcher pubs object by persNo
+	pubs = Publication.objects.filter(researchers__persNo=persNo)
+	profile["publications"] = pubs
+
+	# PLEASE CHANGE RESEARCHER.DEPARTMENT TO CONTAIN A FULL DESCRIPTION (e.g. BIOL SCI to 'Biological Sciences')
+	return render(request, "userMain.html", profile)
