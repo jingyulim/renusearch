@@ -12,14 +12,8 @@ def login(request):
 def forgotPwd(request):
 	return render(request, "forgot-password.html")
 
-def researcher(request):
-	return render(request, "userMain.html")
-
 def addResearcher(request):
 	return render(request, "addresearcher.html")
-
-def searchedResults(request):
-	return render(request, "searchedresults.html")
 
 def searchResult(request, faculty=None, department=None):
 	params = request.GET
@@ -51,18 +45,9 @@ def researcherVerified(request):
 	return render(request, "researcherVerified.html")
 
 # officer search
-def officerResearcherProfile(request):
-	params = request.GET # possibly add researcher?
-	persNum = params["persNo"] # assuming persNo is the ID (check models.py)
-
+def officerResearcherProfile(request, persNo):
 	# get researcher metrics by persNo
-	researchers = Reseacher.objects.filter(fieldname="persNo")
-	profile = researchers.values(persNum)
-
+	researcher = Reseacher.objects.filter(persNo=persNo)
 	# get researcher pubs
-	pubs = Publication.objects.filter(researcher__in=[persNum]) # need to filter by id in researcher table
-	profile["pubs"] = pubs.values()  # add pubs to profiles. {{pubs}} in front end?
-
-	context = dict(profile) # convert profiles list to dict to render?
-	return HttpResponse(template.render(request, "userMain.html", context))
-
+	pubs = Publication.objects.filter(researcher__in=[persNo]) 
+	return HttpResponse(template.render(request, "userMain.html", researcher, pubs))

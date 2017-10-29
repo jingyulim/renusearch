@@ -24,10 +24,8 @@ urlpatterns = [
     url(r'^forgot-password', forgotPwd),
     url(r'^addresearcher', addResearcher),
     #url(r'^researcher', researcher),
-    url(r'^researcher/detail', researcher),
-    url(r'^searchedresults', searchedResults),
+    url(r'^researcher/detail/(?P<persNo>[0-9]{7})/$', officerResearcherProfile),
     url(r'^searchresult',searchResult),
-
     url(r'^usermain', usermain),
 
     # for researchers

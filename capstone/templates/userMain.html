@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,14 +10,14 @@
   <meta name="author" content="">
   <title>ReNUSearch</title>
   <!-- Bootstrap core CSS-->
-  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="{% static "vendor/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
-  <link href="static/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="{% static "vendor/datatables/dataTables.bootstrap4.css" %}" rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="static/css/sb-admin.css" rel="stylesheet">
-  <link href="static/css/number.css" rel="stylesheet">
+  <link href="{% static "css/sb-admin.css" %}" rel="stylesheet">
+  <link href="{% static "css/number.css" %}" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -53,8 +54,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-user-circle-o"></i>
-            <span class="name">Cindy Tay
-            </span>
+            <span class="name">Cindy Tay</span>
           </a>
           <div class="dropdown-menu">
             <div class="dropdown-divider"></div>
@@ -80,9 +80,9 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <h1>LIU JIE</h1>
-          <p>Assistant Professor<br>
-            Department of Mathematics</p>
+          <h1>{{researcher.name}}</h1>
+          <p>{{researcher.position}}<br>
+            {{researcher.department}}</p>
         </li>
       </ol>
 
@@ -152,91 +152,13 @@
                 </tr>
               </thead>
               <tbody>
+                {% for pub in pubs %}
                 <tr>
-                  <td>A second-order changing-connectivity ALE scheme and its application to FSI with large convection of fluids and near contact of structures</td>
-                  <td>2016</td>
-                  <td>37</td>
+                  <td>{{ pub.title }}</td>
+    				      <td>{{ pub.year }}</td>
+    				      <td>{{ pub.numberOfCitations }}</td>
                 </tr>
-                <tr>
-                  <td>A second-order stable explicit interface advancing scheme for FSI with both rigid and elastic structures and its application to fish swimming simulations</td>
-                  <td>2015</td>
-                  <td>29</td>
-                </tr>
-                <tr>
-                  <td>A stable second-order scheme for fluid-structure interaction with strong added-mass effects</td>
-                  <td>2014</td>
-                  <td>26</td>
-                </tr>
-                <tr>
-                  <td>Order of convergence of splitting schemes for both deterministic and stochastic nonlinear Schrödinger equations</td>
-                  <td>2013</td>
-                  <td>19</td>
-                </tr>
-                <tr>
-                  <td>A mass-preserving splitting scheme for the stochastic Schrödinger equation with multiplicative noise</td>
-                  <td>2013</td>
-                  <td>17</td>
-                </tr>
-                <tr>
-                  <td>Simple and efficient ALE methods with provable temporal accuracy up to fifth order for the stokes equations on time varying domains</td>
-                  <td>2013</td>
-                  <td>17</td>
-                </tr>
-                <tr>
-                  <td>Stable and spectrally accurate schemes for the navier-stokes equations</td>
-                  <td>2011</td>
-                  <td>11</td>
-                </tr>
-                <tr>
-                  <td>Stable and accurate pressure approximation for unsteady incompressible viscous flow</td>
-                  <td>2010</td>
-                  <td>6</td>
-                </tr>
-                <tr>
-                  <td>A time domain blind decorrelation method of convolutive mixtures based on an IIR model</td>
-                  <td>2010</td>
-                  <td>6</td>
-                </tr>
-                <tr>
-                  <td>A soft-constrained dynamic iterative method of blind source separation</td>
-                  <td>2009</td>
-                  <td>5</td>
-                </tr>
-                <tr>
-                  <td>Error estimates for finite-element Navier-Stokes solvers without standard Inf-Sup conditions</td>
-                  <td>2009</td>
-                  <td>4</td>
-                </tr>
-                <tr>
-                  <td>Open and traction boundary conditions for the incompressible Navier-Stokes equations</td>
-                  <td>2009</td>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <td>A time domain algorithm for blind separation of convolutive sound mixtures and L1 constrained minimization of cross correlations</td>
-                  <td>2009</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>A dynamic algorithm for blind separation of convolutive sound mixtures</td>
-                  <td>2008</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>Stability and convergence of efficient Navier-Stokes solvers via a commutator estimate</td>
-                  <td>2007</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>Combined field formulation and a simple stable explicit interface advancing scheme for fluid structure interaction</td>
-                  <td>2013</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>Estimates on the Stokes Pressure by Partitioning the Energy of Harmonic Functions (Kyoto Conference on the Navier-Stokes Equations and their Applications)</td>
-                  <td>2007</td>
-                  <td>0</td>
-                </tr>
+                {% endfor %}
               </tbody>
             </table>
           </div>
@@ -270,26 +192,26 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <a class="btn btn-primary" href="login">Logout</a>
           </div>
         </div>
       </div>
     </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
+    <script src="{% static "vendor/popper/popper.min.js" %}"></script>
+    <script src="{% static "vendor/bootstrap/js/bootstrap.min.js" %}"></script>
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{% static "vendor/jquery-easing/jquery.easing.min.js" %}"></script>
     <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="{% static "vendor/chart.js/Chart.min.js" %}"></script>
+    <script src="{% static "vendor/datatables/jquery.dataTables.js" %}"></script>
+    <script src="{% static "vendor/datatables/dataTables.bootstrap4.js" %}"></script>
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
+    <script src="{% static "js/sb-admin.min.js" %}"></script>
     <!-- Custom scripts for this page-->
-    <script src="js/sb-admin-datatables.min.js"></script>
-    <script src="js/sb-admin-charts.min.js"></script>
+    <script src="{% static "js/sb-admin-datatables.min.js" %}"></script>
+    <script src="{% static "js/sb-admin-charts.min.js" %}"></script>
   </div>
 </body>
 
