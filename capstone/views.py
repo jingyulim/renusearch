@@ -7,6 +7,7 @@ def index(request):
 	return render(request, "login.html")
 
 def login(request):
+
 	return render(request, "login.html")
 
 def forgotPwd(request):
@@ -17,9 +18,6 @@ def researcher(request):
 
 def addResearcher(request):
 	return render(request, "addresearcher.html")
-
-def searchedResults(request):
-	return render(request, "searchedresults.html")
 
 def searchResult(request, faculty=None, department=None):
 	params = request.GET
@@ -38,7 +36,7 @@ def searchResult(request, faculty=None, department=None):
 		res['researchers'] = researchers
 	else:
 		res['validation'] = "invalid"
-	return render(request, "search.html", res)
+	return render(request, "searchresult.html", res)
 
 def usermain(request):
 	return render(request, "userMain.html")
