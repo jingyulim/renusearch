@@ -43,7 +43,6 @@ def searchResult(request, faculty=None, department=None):
 def usermain(request):
 	return render(request, "userMain.html")
 
-
 # researcher profile
 def researcherChanges(request):
 	return render(request, "researcherChanges.html")
@@ -66,3 +65,4 @@ def officerResearcherProfile(request):
 
 	context = dict(profile) # convert profiles list to dict to render?
 	return HttpResponse(template.render(request, "userMain.html", context))
+
