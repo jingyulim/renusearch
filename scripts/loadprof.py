@@ -31,7 +31,5 @@ def run():
         researcher.save()
     print("Completed! - Loaded {} professors to db".format(len(df)))
 
-    researchers = Researcher.get
-
 if __name__ == '__main__':
     run()
