@@ -10,12 +10,17 @@ def login(request):
 	queue = Queue()
 	queue.save()
 	res = {'queue':queue}
-	print(queue.queueID)
 	return render(request, "login.html", res)
 
 def forgotPwd(request):
 	return render(request, "forgot-password.html")
 
+<<<<<<< HEAD
+def researcher(request):
+	return render(request, "userMain.html")
+
+=======
+>>>>>>> c5d92320c9754f9813ab32011d7591a21fb64965
 def addResearcher(request, queueID):
 	result = {'queueID':queueID}
 	return render(request, "addresearcher.html",result)
@@ -40,6 +45,9 @@ def searchResult(request, queueID, faculty=None, department=None):
 	else:
 		res['validation'] = "invalid"
 	return render(request, "searchresult.html", res)
+
+def usermain(request):
+	return render(request, "userMain.html")
 
 # researcher profile
 def researcherChanges(request):

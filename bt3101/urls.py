@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^login', login, name="login"),
     url(r'^forgot-password', forgotPwd),
+    
     url(r'^addresearcher/(?P<queueID>[0-9]+)/$', addResearcher),
 
     #url(r'^researcher', researcher),
