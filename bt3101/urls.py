@@ -1,7 +1,7 @@
 """bt3101 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/1.11/topics/http/urls/
+        /
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -23,7 +23,12 @@ urlpatterns = [
     url(r'^login', login),
     url(r'^forgot-password', forgotPwd),
     url(r'^addresearcher', addResearcher),
-    url(r'^researcher', researcher),
+    #url(r'^researcher', researcher),
+    url(r'^researcher/detail', researcher),
+    url(r'^searchedresults', searchedResults),
+    url(r'^searchresult',searchResult),
+
+    url(r'^usermain', usermain),
 
     # for researchers
     url(r'^changes', researcherChanges),
