@@ -121,13 +121,13 @@
                     <small id="usernameHelp" class="form-text text-muted" style="color:#ff0000">*compulsory</small>
                 </div>
 
-                <div class="category_div" id="category_div" >FACULTY
-                    <select class="form-control" id="source" name="source" placeholder="Select Faculty" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
-                    <option value="">Select Faculty</option>
-                    <option value="SCIENCE">SCIENCE</option>
-                    <option value="ENGINEERING">ENGINEERING</option>
-                    </select>
-                </div>
+                  <div class="category_div" id="category_div" >FACULTY
+                      <select class="form-control" id="source" name="source" placeholder="Select Faculty" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                      <option value="" d >Select Faculty</option>
+                      <option value="SCIENCE">SCIENCE</option>
+                      <option value="ENGINEERING">ENGINEERING</option>
+                      </select>
+                  </div>
 <br/>
 
                 <div class="sub_category_div" id="sub_category_div">DEPARTMENT
@@ -151,7 +151,7 @@
 
 
 <br />
-                  <a href=# class="btn btn-info" role="button" onclick="onSubmit()">Submit</a>
+                  <a href="javascript:window.location=onSubmit();"  class="btn btn-info" role="button" onclick="onSubmit()">Submit</a>
               <!--    <button type="submit" class="btn btn-primary" href="user.html">Submit</button> -->
                 </div>
 
@@ -160,18 +160,6 @@
             </div>
           </div>
         </div>
-
-
-
-
-<!--nothing
-        <div class="col-12">
-          <h1>Blank</h1>
-          <p>This is an example of a blank page that you can use as a starting point for creating new ones.</p>
-        </div>
-      </div>
-    </div>
--->
 
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
@@ -251,11 +239,17 @@
 
   <script>
   function onSubmit() {
-    if (document.getElementById('textbox').value == 'Liu Jie' && document.getElementById('source').options[document.getElementById('source').selectedIndex].text == 'SCIENCE' && document.getElementById('status').options[document.getElementById('status').selectedIndex].text == 'Mathematics')  {
-      document.location.href = "userMain.html";
-    } else {
-      document.location.href = "searchedresults.html";
-    }
+
+    var URL;
+
+    var name = document.getElementById('textbox').value;
+    var faculty = document.getElementById('source').options[document.getElementById('source').selectedIndex].text;
+    var department  = document.getElementById('status').options[document.getElementById('status').selectedIndex].text;
+
+    URL = "searchresult?name="
+    URL += name
+
+    return URL
 
   }
   </script>
@@ -275,6 +269,9 @@
     {
       switch (listindex)
       {
+        case "":
+          document.getElementById("status").options[0] = new Option("Select Department", "");
+
         case "SCIENCE" :
           document.getElementById("status").options[0] = new Option("Select Department", "");
           document.getElementById("status").options[1] = new Option("Biological Science", "Biological Science");
@@ -288,7 +285,7 @@
 
         case "ENGINEERING" :
           document.getElementById("status").options[0] = new Option("Select Department", "");
-          document.getElementById("status").options[1] = new Option("Biolmedical Engineering", "Biomedical Engineering");
+          document.getElementById("status").options[1] = new Option("Biomedical Engineering", "Biomedical Engineering");
           document.getElementById("status").options[2] = new Option("Civil & Environmental Engineering", "Civil & Environmental Engineering");
           document.getElementById("status").options[3] = new Option("Chemical Engineering", "Chemical Engineering");
           document.getElementById("status").options[4] = new Option("Electronic & Computer Engineering", "Electronic & Computer Engineering");
