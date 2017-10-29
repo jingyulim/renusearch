@@ -15,9 +15,12 @@ def login(request):
 def forgotPwd(request):
 	return render(request, "forgot-password.html")
 
+<<<<<<< HEAD
 def researcher(request):
 	return render(request, "userMain.html")
 
+=======
+>>>>>>> c5d92320c9754f9813ab32011d7591a21fb64965
 def addResearcher(request, queueID):
 	result = {'queueID':queueID}
 	return render(request, "addresearcher.html",result)
@@ -55,6 +58,7 @@ def researcherVerified(request):
 
 # officer search
 def officerResearcherProfile(request, persNo):
+<<<<<<< HEAD
 	params = request.GET # possibly add researcher?
 	persNum = params["persNo"] # assuming persNo is the ID (check models.py)
 
@@ -68,3 +72,15 @@ def officerResearcherProfile(request, persNo):
 
 	context = dict(profile) # convert profiles list to dict to render?
 	return HttpResponse(template.render(request, "userMain.html", context))
+=======
+	profile = {}
+	# get researcher object by persNo
+	researcher = Researcher.objects.filter(persNo=persNo)
+	profile["researcher"] = researcher
+	# get researcher pubs object by persNo
+	pubs = Publication.objects.filter(researchers__persNo=persNo)
+	profile["publications"] = pubs
+
+	# PLEASE CHANGE RESEARCHER.DEPARTMENT TO CONTAIN A FULL DESCRIPTION (e.g. BIOL SCI to 'Biological Sciences')
+	return render(request, "userMain.html", profile)
+>>>>>>> c5d92320c9754f9813ab32011d7591a21fb64965
