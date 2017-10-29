@@ -7,6 +7,7 @@ def index(request):
 	return render(request, "login.html")
 
 def login(request):
+
 	return render(request, "login.html")
 
 def forgotPwd(request):
@@ -32,7 +33,7 @@ def searchResult(request, faculty=None, department=None):
 		res['researchers'] = researchers
 	else:
 		res['validation'] = "invalid"
-	return render(request, "search.html", res)
+	return render(request, "searchresult.html", res)
 
 # researcher profile
 def researcherChanges(request):
