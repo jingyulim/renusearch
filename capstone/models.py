@@ -7,7 +7,7 @@ class SubjectArea(models.Model):
     faculty = models.CharField(max_length=100)
     department = models.CharField(max_length=100)
 
-    def __str__(self):  
+    def __str__(self):
         return self.subjectName
 
 class Researcher(models.Model):
@@ -23,7 +23,7 @@ class Researcher(models.Model):
     numberOfCitations = models.IntegerField()
     hIndex = models.IntegerField()
 
-    def __str__(self):  
+    def __str__(self):
         return self.name
 
 class Publication(models.Model):
@@ -33,12 +33,12 @@ class Publication(models.Model):
     numberOfCitations = models.IntegerField()
     researchers = models.ManyToManyField(Researcher)
 
-    def __str__(self):  
+    def __str__(self):
         return self.title
 
 class QueueItems(models.Model):
     queueID = models.IntegerField()
-    queueNum = models.IntegerField()
+    queueNum = models.IntegerField() 
     researchers = models.ForeignKey(Researcher, on_delete=models.CASCADE)
 
     class Meta:
