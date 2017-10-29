@@ -7,8 +7,11 @@ def index(request):
 	return render(request, "login.html")
 
 def login(request):
-
-	return render(request, "login.html")
+	queue = Queue()
+	queue.save()
+	res = {'queue':queue}
+	print(queue.queueID)
+	return render(request, "login.html", res)
 
 def forgotPwd(request):
 	return render(request, "forgot-password.html")
@@ -16,15 +19,17 @@ def forgotPwd(request):
 def researcher(request):
 	return render(request, "userMain.html")
 
-def addResearcher(request):
-	return render(request, "addresearcher.html")
+def addResearcher(request, queueID):
+	result = {'queueID':queueID}
+	return render(request, "addresearcher.html",result)
 
-def searchResult(request, faculty=None, department=None):
+def searchResult(request, queueID, faculty=None, department=None):
 	params = request.GET
-	res = 	{'validation':'invalid'}
+	res = 	{'validation':'invalid', 'queueID':queueID}
 	if params:
 		res['validation'] = 'valid'
 		researchers = Researcher.objects.filter(name__icontains=params['name'])
+
 		# try:
 		# 	faculty = params['faculty']
 		# 	department = params['department']
@@ -33,6 +38,7 @@ def searchResult(request, faculty=None, department=None):
 		# 	researchers = researchers.filter(faculty=faculty)
 		# if department:
 		# 	researchers = researchers.filter(department=department)
+
 		res['researchers'] = researchers
 	else:
 		res['validation'] = "invalid"
@@ -40,7 +46,6 @@ def searchResult(request, faculty=None, department=None):
 
 def usermain(request):
 	return render(request, "userMain.html")
-
 
 # researcher profile
 def researcherChanges(request):
@@ -50,7 +55,7 @@ def researcherVerified(request):
 	return render(request, "researcherVerified.html")
 
 # officer search
-def officerResearcherProfile(request):
+def officerResearcherProfile(request, persNo):
 	params = request.GET # possibly add researcher?
 	persNum = params["persNo"] # assuming persNo is the ID (check models.py)
 

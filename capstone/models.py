@@ -36,6 +36,13 @@ class Publication(models.Model):
     def __str__(self):  
         return self.title
 
-class Queue(models.Model):
-    queueID = models.IntegerField(primary_key=True)
+class QueueItems(models.Model):
+    queueID = models.IntegerField()
+    queueNum = models.IntegerField()
     researchers = models.ForeignKey(Researcher, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = (("queueID", "queueNum"),)
+
+class Queue(models.Model):
+    queueID = models.AutoField(primary_key=True)

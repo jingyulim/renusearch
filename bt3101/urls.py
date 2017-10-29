@@ -22,11 +22,11 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^login', login),
     url(r'^forgot-password', forgotPwd),
-    url(r'^addresearcher', addResearcher),
+    url(r'^addresearcher/(?P<queueID>[0-9]+)/$', addResearcher),
+
     #url(r'^researcher', researcher),
-    url(r'^researcher/detail', researcher),
-    url(r'^searchedresults', searchedResults),
-    url(r'^searchresult',searchResult),
+    url(r'^researcher/(?P<queueID>[0-9]+)/detail/(?P<persNo>[0-9]+)/$', officerResearcherProfile),
+    url(r'^addresearcher/(?P<queueID>[0-9]+)/searchresult',searchResult),
 
     url(r'^usermain', usermain),
 
