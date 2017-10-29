@@ -20,15 +20,20 @@ from capstone.views import *
 urlpatterns = [
     # for login
     url(r'^$', index, name='index'),
-    url(r'^login', login),
+    url(r'^login', login, name="login"),
     url(r'^forgot-password', forgotPwd),
+<<<<<<< HEAD
     url(r'^addresearcher/(?P<queueID>[0-9]+)/$', addResearcher),
 
     #url(r'^researcher', researcher),
     url(r'^researcher/(?P<queueID>[0-9]+)/detail/(?P<persNo>[0-9]+)/$', officerResearcherProfile),
     url(r'^addresearcher/(?P<queueID>[0-9]+)/searchresult',searchResult),
-
-    url(r'^usermain', usermain),
+=======
+    url(r'^addresearcher', addResearcher, name="search"),
+    #url(r'^researcher', researcher),
+    url(r'^researcher/detail/(?P<persNo>[0-9]+)/$', officerResearcherProfile),
+    url(r'^searchresult',searchResult),
+>>>>>>> master
 
     # for researchers
     url(r'^changes', researcherChanges),

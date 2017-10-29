@@ -10,7 +10,6 @@ def login(request):
 	queue = Queue()
 	queue.save()
 	res = {'queue':queue}
-	print(queue.queueID)
 	return render(request, "login.html", res)
 
 def forgotPwd(request):
@@ -69,4 +68,3 @@ def officerResearcherProfile(request, persNo):
 
 	context = dict(profile) # convert profiles list to dict to render?
 	return HttpResponse(template.render(request, "userMain.html", context))
-
