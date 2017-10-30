@@ -24,32 +24,21 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="user.html">Re<span class="nus">NUS</span>earch</a>
+    <a class="navbar-brand" href="">Re<span class="nus">NUS</span>earch</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-<!-- LIU JIE IS NOT ADDED YET -->
-<!--
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="userMain.html">
-            <button type="button" class="btn btn-secondary btn-block">
-              <i class="fa fa-graduation-cap"></i>
-              <span class="nav-link-text">LIU JIE</span>
-            </button>
-          </a>
-        </li>
--->
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
           <a class="nav-link" href="addresearcher.html">
             <div style="text-align:center">
               <i class="fa fa-plus"></i>
               <span class="nav-link-text">Add Researcher</span>
             </div>
           </a>
-        </li>
+        </li> -->
       </ul>
 
       <!-- Top right of dashboard -->
@@ -94,7 +83,7 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <h1>SEARCH RESULTS</h1>
+          <h1>Search Results</h1>
         </li>
       </ol>
 
@@ -115,8 +104,7 @@
               </thead>
               <tbody>
 				  	{% for res in researchers %}
-				    <tr class='clickable-row' style="cursor: pointer" data-href="/researcher/detail/{{ res.persNo }}/">
-
+				    <tr class='clickable-row' style="cursor: pointer" data-href="/researcher/{{ queueID }}/detail/{{ res.persNo }}/">
 				    <!-- data-href="javascript:window.location=onSubmit();"  onclick="onSubmit({{ res.name  }})"> -->
 				      <td>{{ res.name }}</td>
 				      <td>{{ res.faculty }}</td>
@@ -156,7 +144,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <a class="btn btn-primary" href="{% url 'login' %}">Logout</a>
           </div>
         </div>
       </div>
