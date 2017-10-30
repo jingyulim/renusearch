@@ -10,7 +10,6 @@ def login(request):
 	# create new Queue object upon login
 	queue = Queue()
 	queue.save()
-
 	res = {'queue':queue}
 	return render(request, "login.html", res)
 
@@ -30,14 +29,19 @@ def searchResult(request, queueID, faculty=None, department=None):
 		res['validation'] = 'valid'
 		researchers = Researcher.objects.filter(name__icontains=params['name'])
 
-		# try:
-		# 	faculty = params['faculty']
-		# 	department = params['department']
+		try:
+			faculty = params['faculty']
+			department = params['department']
+		except:
+			faculty = None
+			department = None
 
-		# if faculty:
-		# 	researchers = researchers.filter(faculty=faculty)
-		# if department:
-		# 	researchers = researchers.filter(department=department)
+		if faculty:
+			if faculty != 'Select Faculty':
+				researchers = researchers.filter(faculty__icontains=faculty)
+		if department:
+			if department != 'Select Department':
+				researchers = researchers.filter(department__icontains=department)
 
 		res['researchers'] = researchers
 	else:
