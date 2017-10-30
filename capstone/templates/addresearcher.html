@@ -95,7 +95,7 @@
         <li class="breadcrumb-item">
           <a href="userMain.html">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">ADD RESEARCHER</li>
+        <li class="breadcrumb-item active">Add Researcher</li>
       </ol>
       <div class="row">
 
@@ -113,9 +113,9 @@
 
                   <div class="category_div" id="category_div" >FACULTY
                       <select class="form-control" id="source" name="source" placeholder="Select Faculty" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
-                      <option value="" d >Select Faculty</option>
-                      <option value="SCIENCE">SCIENCE</option>
-                      <option value="ENGINEERING">ENGINEERING</option>
+                      <option value="" disabled selected >Select Faculty</option>
+                      <option value="SCIENCE">Science</option>
+                      <option value="ENGINEERING">Engineering</option>
                       </select>
                   </div>
 <br/>
@@ -133,13 +133,10 @@
                         <option value="Chemistry">Pharmacy</option>
                         <option value="Chemistry">Physics</option>
                         <option value="Chemistry">Statistics & Applied Math</option>
-
                       </select>
                     </noscript>
 
                 </div>
-
-
 <br />
                   <a class="btn btn-info" role="button" onclick="onSubmit()">Submit</a>
               <!--    <button type="submit" class="btn btn-primary" href="user.html">Submit</button> -->
@@ -198,13 +195,10 @@
 
   <script>
   function onSubmit() {
-    var URL;
     var name = document.getElementById('textbox').value;
     var faculty = document.getElementById('source').options[document.getElementById('source').selectedIndex].text;
     var department  = document.getElementById('status').options[document.getElementById('status').selectedIndex].text;
-    URL = "searchresult/"+{{ queueID }}+"?name="
-    URL += name
-    document.location.href = "searchresult?name=" + name
+    document.location.href = "searchresult?name=" + name + "&faculty=" + faculty + "&department=" + department;
   }
   </script>
 
