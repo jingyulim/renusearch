@@ -23,6 +23,8 @@ def addResearcher(request, queueID):
 def searchResult(request, queueID, faculty=None, department=None):
 	params = request.GET
 	res = 	{'validation':'invalid', 'queueID':queueID}
+	item = QueueItems(queueID=queueID, queueNum=#autogenerate)
+
 	if params:
 		res['validation'] = 'valid'
 		researchers = Researcher.objects.filter(name__icontains=params['name'])
