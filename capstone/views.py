@@ -16,14 +16,37 @@ def login(request):
 def forgotPwd(request):
 	return render(request, "forgot-password.html")
 
+def getNewQueueNumber(queueID):
+	try:
+		number = QueueItems.objects.filter(queueID=queueID).order_by('-queueNum')[0].queueNum
+		number += 1
+	except:
+		number = 1
+	return number
+
+def getQueue(queueID):
+	inqueue = QueueItems.objects.filter(queueID=queueID).order_by('queueNum')
+	return inqueue
+
+def addToQueue(researcher, queueID):
+	num = getNewQueueNumber(queueID)
+	queue = getQueue(queueID)
+	for r in queue:
+		if researcher.persNo == r.researchers.persNo:
+			return()
+	newRinqueue = QueueItems()
+	newRinqueue.queueID = queueID
+	newRinqueue.queueNum = num
+	newRinqueue.researchers = researcher
+	newRinqueue.save()
+
 def addResearcher(request, queueID):
-	result = {'queueID':queueID}
+	result = {'queueID':queueID, "queue":getQueue(queueID)}
 	return render(request, "addresearcher.html", result)
 
 def searchResult(request, queueID, faculty=None, department=None):
 	params = request.GET
 	res = 	{'validation':'invalid', 'queueID':queueID}
-	item = QueueItems(queueID=queueID, queueNum=#autogenerate)
 
 	if params:
 		res['validation'] = 'valid'
@@ -44,20 +67,27 @@ def searchResult(request, queueID, faculty=None, department=None):
 				researchers = researchers.filter(department__icontains=department)
 
 		res['researchers'] = researchers
+		res['queue'] = getQueue(queueID)
 	else:
 		res['validation'] = "invalid"
 	return render(request, "searchresult.html", res)
 
 def officerResearcherProfile(request, queueID, persNo):
 	profile = {"queueID":queueID}
+
 	# get researcher object by persNo
-	researcher = Researcher.objects.filter(persNo=persNo)
+	researcher = Researcher.objects.get(persNo=persNo)
 	profile["researcher"] = researcher
+
 	# get researcher pubs objects by persNo
 	pubs = Publication.objects.filter(researchers__persNo=persNo)
 	profile["publications"] = pubs
+
+	addToQueue(researcher,queueID)
+
 	# get search history (queue items)
-	profile["searched"] = QueueItems.objects.filter(queueID=queueID)
+	profile['queue'] = getQueue(queueID)
+
 	# PLEASE CHANGE RESEARCHER.DEPARTMENT TO CONTAIN A FULL DESCRIPTION (e.g. BIOL SCI to 'Biological Sciences')
 	return render(request, "userMain.html", profile)
 

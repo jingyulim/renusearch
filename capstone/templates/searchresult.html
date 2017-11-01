@@ -31,14 +31,16 @@
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="addresearcher.html">
-            <div style="text-align:center">
-              <i class="fa fa-plus"></i>
-              <span class="nav-link-text">Add Researcher</span>
-            </div>
-          </a>
-        </li> -->
+        {% for qi in queue %}
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="{{ qi.researchers.name }}">
+            <a class="nav-link" href="/researcher/{{ queueID }}/detail/{{ qi.researchers.persNo }}/">
+                <center><i class="fa fa-graduation-cap"></i>
+                <span class="nav-link-text">{{ qi.researchers.name }}</span></center>
+            </a>
+          </li>
+
+        {% endfor %}
       </ul>
 
       <!-- Top right of dashboard -->

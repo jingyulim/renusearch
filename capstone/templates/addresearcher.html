@@ -33,20 +33,17 @@
 
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
-
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        {% for qi in queue %}
 
-        <!-- CONTAINS QUEUE AS LIST ITEMS -->
-        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="{{ qi.researchers.name }}">
+            <a class="nav-link" href="/researcher/{{ queueID }}/detail/{{ qi.researchers.persNo }}/">
+                <center><i class="fa fa-graduation-cap"></i>
+                <span class="nav-link-text">{{ qi.researchers.name }}</span></center>
+            </a>
+          </li>
 
-          <a class="nav-link" href="addresearcher.html">
-
-            <div style="text-align:center">
-              <i class="fa fa-plus"></i>
-              <span class="nav-link-text">Add Researcher</span>
-            </div>
-          </a>
-        </li> -->
+        {% endfor %}
       </ul>
 
 
@@ -91,12 +88,10 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="userMain.html">Dashboard</a>
-        </li>
+<!--       <ol class="breadcrumb">
+        <li class="breadcrumb-item inactive">Dashboard</li>
         <li class="breadcrumb-item active">Add Researcher</li>
-      </ol>
+      </ol> -->
       <div class="row">
 
 

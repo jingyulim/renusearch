@@ -30,16 +30,30 @@
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          {% for res in researcher %}
-          <a class="nav-link" href=#>
-            <button type="button" class="btn btn-secondary btn-block">
-              <i class="fa fa-graduation-cap"></i>
-              <span class="nav-link-text">{{res.name}}</span>
-            </button>
-          </a>
-          {% endfor %}
-        </li>
+        {% for qi in queue %}
+
+          {% if qi.researchers.name == researcher.name %}
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Potato">
+            <a class="nav-link" href=#/>
+              <button type="button" class="btn btn-secondary btn-block">
+                <i class="fa fa-graduation-cap"></i>
+                <span class="nav-link-text">{{ researcher.name }}</span>
+              </button>
+            </a>
+          </li>
+          {% endif %}
+
+          {% if qi.researchers.name != researcher.name %}
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+            <a class="nav-link" href="/researcher/{{ queueID }}/detail/{{ qi.researchers.persNo }}/">
+                <center><i class="fa fa-graduation-cap"></i>
+                <span class="nav-link-text">{{ qi.researchers.name }}</span></center>
+            </a>
+          </li>
+          {% endif %}
+
+        {% endfor %}
+
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
           <a class="nav-link" href="/addresearcher/{{ queueID }}/">
@@ -81,11 +95,10 @@
       <!-- Header of researcher profile -->
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
-        {% for res in researcher %}
         <li class="breadcrumb-item">
-          <h1>{{res.name}}</h1>
-          <p>{{res.position}}<br>
-            Department of {{res.department}}</p>
+          <h1>{{researcher.name}}</h1>
+          <p>{{researcher.position}}<br>
+            Department of {{researcher.department}}</p>
         </li>
       </ol>
 
@@ -102,7 +115,7 @@
                 <i class="fa fa-bar-chart"></i>
               </div>
               <div class="mr-5">
-                <span class="word">H-Index: </span><span class="number">{{res.hIndex}}</span>
+                <span class="word">H-Index: </span><span class="number">{{researcher.hIndex}}</span>
               </div>
             </div>
           </div>
@@ -118,7 +131,7 @@
                 <i class="fa fa-book"></i>
               </div>
               <div class="mr-5">
-                <span class="word">Publications: <span><span class="number">{{res.numberOfPubs}}</span>
+                <span class="word">Publications: <span><span class="number">{{researcher.numberOfPubs}}</span>
               </div>
             </div>
           </div>
@@ -134,13 +147,12 @@
                 <i class="fa fa-commenting"></i>
               </div>
               <div class="mr-5">
-                <span class="word">Citations: </span><span class="number">{{res.numberOfCitations}}</span>
+                <span class="word">Citations: </span><span class="number">{{researcher.numberOfCitations}}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {% endfor %}
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
