@@ -27,7 +27,7 @@ class Researcher(models.Model):
         return self.name
 
 class Publication(models.Model):
-    pubID = models.IntegerField(primary_key=True, default=12345)
+    pubID = models.BigIntegerField(primary_key=True, default=12345678)
     title = models.TextField()
     year = models.IntegerField()
     numberOfCitations = models.IntegerField()

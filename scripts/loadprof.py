@@ -8,7 +8,7 @@ import pandas as pd
 
 
 def run():
-    df = pd.read_csv("scripts/dummyprof.csv")
+    df = pd.read_csv("scripts/researcher.csv")
     if len(df) != len(df["persNo"].unique()):
         print("Data CSV specified has duplicate persNo. Quitting.")
         return

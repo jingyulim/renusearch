@@ -1,0 +1,145 @@
+persNo,firstName,lastName,name,ESSID,department,faculty,position,authorIDs,numPubs,numCitations,hIndex
+1933,Meng Hau,Kuok,Kuok Meng Hau,PHYKMH,Physics,Science,Professor,7003712946,127,1627,19
+2014,Hoong Chor,Chin,Chin Hoong Chor,CEECHC,Civil & Environmental Engineering,Engineering,Assoc Professor,7101621239,51,1082,17
+2153,Choy Heng,Lai,Lai Choy Heng,PHYLAICH,Physics,Science,Professor,7403086160,137,2270,25
+2223,Weng Tat,Chan,Chan Weng Tat,CEECWT,Civil & Environmental Engineering,Engineering,Assoc Professor,7403918126,46,1208,20
+2614,Kiang Hwee,Tan,Tan Kiang Hwee,CEETANKH,Civil & Environmental Engineering,Engineering,Professor,56004289200,84,1050,20
+2958,Somsak,Swaddiwudhipong,"Swaddiwudhipong, Somsak",CEESOMSA,Civil & Environmental Engineering,Engineering,Professor,7004147781,120,1612,22
+3073,Gaik Khuan,Chuah,Chuah Gaik Khuan,CHMCGK,Chemistry,Science,Assoc Professor,35576149100,107,3229,33
+3109,Jeak Ling,Ding,Ding Jeak Ling,DBSDJL,Biological Science,Science,Professor,55663934300,154,3636,34
+3140,Yuen Kwong,Ip,Ip Yuen Kwong,DBSIPYK,Biological Science,Science,Professor,"[7006740134, 57190586129]",180,3674,33
+3448,Cho Hong James,Goh,"Goh Cho Hong, James",BIEGOHJ,Biomedical Engineering,Engineering,Professor,7102139532,218,6317,45
+3681,Hock,Lim,Lim Hock,PHYLIMH,Physics,Science,Professor,"[14033409900, 35830978800, 7403095021]",125,1765,21
+3868,Say Leong,Ong,Ong Say Leong,CEEONGSL,Civil & Environmental Engineering,Engineering,Professor,7202336460,181,3768,35
+5053,Tien Fang,Fwa,Fwa Tien Fang,CEEFWATF,Civil & Environmental Engineering,Engineering,Professor,7005344348,165,1443,21
+5346,Fah Fatt,Gan,Gan Fah Fatt,STAGANFF,Statistics & Applied Probability,Science,Assoc Professor,36915700600,31,486,13
+5654,Kwok Pui,Choi,Choi Kwok Pui,STACKP,Statistics & Applied Probability,Science,Assoc Professor,7403949531,28,204,8
+5671,Woon Khiong,Chan,Chan Woon Khiong,DBSCWK,Biological Science,Science,Assoc Professor,13806501900,60,3299,25
+6040,Wee Shong,Chin,Chin Wee Shong,CHMCWS,Chemistry,Science,Assoc Professor,7202546790,70,1805,24
+6512,Kok Kwang,Phoon,Phoon Kok Kwang,CEEPKK,Civil & Environmental Engineering,Engineering,Professor,7003306513,260,4452,34
+7059,Ser Peow,Tan,Tan Ser Peow,MATTANSP,Mathematics,Science,Professor,7403366454,31,156,8
+7191,Prakash P,Kumar,"Kumar, Prakash P",DBSKUMAR,Biological Science,Science,Professor,"[7403960422, 7102320135]",150,2884,28
+7675,Yuan Ping,Feng,Feng Yuan Ping,PHYFYP,Physics,Science,Professor,13302546400,310,9912,48
+7907,Kim Chuan,Toh,Toh Kim Chuan,MATTOHKC,Mathematics,Science,Professor,24294588700,92,3238,24
+7985,Wei,Ji,Ji Wei,PHYJIWEI,Physics,Science,Professor,"[36103643300, 57193611077]",264,9170,54
+8468,Yulin,Lam,Lam Yulin,CHMLAMYL,Chemistry,Science,Assoc Professor,7202563930,81,1284,20
+8511,Chorng Haur,Sow,Sow Chorng Haur,PHYSOWCH,Physics,Science,Professor,7004263886,253,7891,47
+8673,Xingwang,Xu,Xu Xingwang,MATXUXW,Mathematics,Science,Professor,35077189200,36,466,12
+9037,Hung Yean,Loke,Loke Hung Yean,MATLHY,Mathematics,Science,Professor,6603840547,19,55,4
+9532,Yue,Yang,Yang Yue,MATYANGY,Mathematics,Science,Professor,"[24297567700, 57194278690, 57195149631]",32,140,6
+9711,Jian-Sheng,Wang,Wang Jian-Sheng,PHYWJS,Physics,Science,Professor,"[7701314861, 16437835600]",393,11109,48
+9857,Fook Tim,Chew,Chew Fook Tim,DBSCFT,Biological Science,Science,Assoc Professor,7102665290,139,2746,29
+10028,Zuowei,Shen,Shen Zuowei,MATZUOWS,Mathematics,Science,Professor,7403324097,113,5656,34
+10474,Ruowen,Ge,Ge Ruowen,DBSGERW,Biological Science,Science,Assoc Professor,7005525097,81,2464,28
+10550,Sanjay,Swarup,"Swarup, Sanjay",DBSSS,Biological Science,Science,Assoc Professor,7005090010,74,1798,22
+11259,Zhiyuan,Gong,Gong Zhiyuan,DBSGZY,Biological Science,Science,Professor,7201947961,202,6872,46
+12178,Chwee Teck,Lim,Lim Chwee Teck,MPELIMCT,Biomedical Engineering,Engineering,Professor,7403654651,393,18506,71
+12373,Rajasekhar,Balasubramanian,"Balasubramanian, Rajasekhar",CEERBALA,Civil & Environmental Engineering,Engineering,Assoc Professor,7103128133,216,4943,39
+12646,Renbi,Bai,Bai Renbi,CEEBAIRB,Civil & Environmental Engineering,Engineering,Assoc Professor,7103145369,86,5275,42
+12986,Jiangyong,Hu,Hu Jiangyong,CEEHUJY,Civil & Environmental Engineering,Engineering,Professor,"[8658510200, 57195213665, 57195213697]",160,3359,32
+13562,Heng Huat,Chan,Chan Heng Huat,MATCHH,Mathematics,Science,Professor,7403402271,61,671,15
+13852,Yu Zong,Chen,Chen Yu Zong,PHACYZ,Pharmacy,Science,Professor,34876158000,248,6797,45
+13886,How Yong,Ng,Ng How Yong,CEENGHY,Civil & Environmental Engineering,Engineering,Professor,8566852400,111,2814,30
+14334,Suresh,Valiyaveettil,"Valiyaveettil, Suresh",CHMSV,Chemistry,Science,Assoc Professor,7004576228,25,1001,14
+14464,Daiqin,Li,Li Daiqin,DBSLIDQ,Biological Science,Science,Assoc Professor,8056409500,117,2240,28
+14997,Kian Ping,Loh,Loh Kian Ping,CHMLOHKP,Chemistry,Science,Professor,"[7103139956, 57191210203, 57194764260]",409,24381,69
+15083,Delin,Chu,Chu Delin,MATCHUDL,Mathematics,Science,Assoc Professor,7201734138,84,940,17
+15643,Eng Soon,Tok,Tok Eng Soon,PHYTOKES,Physics,Science,Assoc Professor,7003863514,172,2290,25
+15804,Jie,Wu,Wu Jie,MATWUJ,Mathematics,Science,Professor,"[55677087681, 35249586800]",42,181,8
+15909,Kai Meng,Tan,Tan Kai Meng,MATTANKM,Mathematics,Science,Assoc Professor,8259534600,24,102,6
+16191,Der-Horng,Lee,Lee Der-Horng,CEELEEDH,Civil & Environmental Engineering,Engineering,Professor,25626679000,110,2155,24
+17761,Daiwen,Yang,Yang Daiwen,DBSYDW,Biological Science,Science,Professor,7404801634,114,3121,29
+17817,Weizhu,Bao,Bao Weizhu,MATBAOWZ,Mathematics,Science,Professor,7101934414,114,2642,28
+17848,Jin Ting,Zhang,Zhang Jin-Ting,STAZJT,Statistics & Applied Probability,Science,Assoc Professor,8933807900,28,692,9
+17958,Defeng,Sun,Sun Defeng,MATSUNDF,Mathematics,Science,Professor,7403966897,70,2573,29
+17992,Hao,Yu,Yu Hao,DBSYUHAO,Biological Science,Science,Professor,"[7405853761, 55621173800, 57194532188, 57194091625, 57190071266, 57191570395]",201,6194,41
+18009,Boon Chuan,Low,Low Boon Chuan,DBSLOWBC,Biological Science,Science,Assoc Professor,7101871082,70,1905,28
+18060,Kunchithapadam,Swaminathan,Kunchithapadam Swaminathan,DBSKS,Biological Science,Science,Assoc Professor,35726146200,59,1021,17
+18370,Thorsten,Wohland,"Wohland, Thorsten",DBSWT,Biological Science,Science,Professor,6602757972,108,2725,29
+18494,Xuesen,Wang,Wang Xuesen,PHYWXS,Physics,Science,Assoc Professor,35082929800,95,1247,20
+20065,Shu,Wang,Wang Shu,DBSWS,Biological Science,Science,Professor,"[7601490099, 55714441500, 56364907500]",414,7655,43
+20244,Meier,Rudolf,"Meier, Rudolf",DBSMR,Biological Science,Science,Professor,35269600400,114,5832,34
+20394,Zhang,Yong,Zhang Yong,BIEZY,Biomedical Engineering,Engineering,Professor,"[55989023000, 32267751600, 57146853100]",297,15190,67
+20529,Jun,Li,Li Jun,BIELJ,Biomedical Engineering,Engineering,Professor,"[36066643600, 8262685700, 55664318000, 56266709300, 55588624100, 56003097800, 24481713500, 55718074300, 7501443167, 55268828300, 55730887800, 26663298400, 56002831500, 56644141900, 57031545000, 56972952800]",5350,107437,132
+20781,Yingcun,Xia,Xia Yingcun,STAXYC,Statistics & Applied Probability,Science,Professor,7403027730,51,1639,21
+21156,Yixin,Lu,Lu Yixin,CHMLYX,Chemistry,Science,Professor,55344564200,187,6541,48
+21814,Yih-Cherng,Liou,Liou Yih-Cherng,DBSLYC,Biological Science,Science,Assoc Professor,"[7102949426, 57195913826]",69,4472,30
+22451,Christian,Kurtsiefer,Christian Kurtsiefer,PHYCK,Physics,Science,Professor,7003978948,172,6141,39
+22802,Dieter,Trau,"Trau, Dieter Wilhelm",BIETRAU,Biomedical Engineering,Engineering,Assoc Professor,6602095084,63,1887,20
+23125,Wei,Chen,Chen Wei,CHMCW,Chemistry,Science,Assoc Professor,"[55675224332, 8673408500, 7409641404, 26643014000, 16184247700, 10339687600, 35172648300, 36452681400, 8703328000, 53464660200, 55716102400, 55230310200, 57191278395, 57077155800, 55613230644, 7409640657, 57054301900, 8405706100, 57195566772]",1343,35165,88
+23195,Dejian,Huang,Huang Dejian,CHMHDJ,Chemistry,Science,Assoc Professor,7403890385,129,8457,31
+23277,Min,Dai,Dai Min,MATDM,Mathematics,Science,Professor,36918061900,35,360,10
+23500,Wang,Zhou,Zhou Wang,STAZW,Statistics & Applied Probability,Science,Professor,55475934300,62,500,12
+23578,Nanguang,Chen,Chen Nanguang,BIECNG,Biomedical Engineering,Engineering,Assoc Professor,7401912224,138,1602,19
+24231,Ramanathan,Mahendiran,Ramanathan Mahendiran,PHYRM,Physics,Science,Assoc Professor,7003716664,127,4428,34
+24609,Qinghua,Xu,Xu Qinghua,CHMXQH,Chemistry,Science,Assoc Professor,"[36740452700, 57191581648, 57191539508]",507,13999,62
+26076,Pui Lai Rachel,Ee,"Ee Pui Lai, Rachel",PHAEPLR,Pharmacy,Science,Assoc Professor,7801587186,45,2196,25
+26130,Chun Yong Eric,Chan,"Chan Chun Yong, Eric",PHACCYE,Pharmacy,Science,Assoc Professor,35279392400,98,2506,29
+26239,Xiaogang,Liu,Liu Xiaogang,CHMLX,Chemistry,Science,Professor,35315695000,132,15028,55
+26346,Giorgia,Pastorin,"Pastorin, Giorgia",PHAPG,Pharmacy,Science,Assoc Professor,8971180400,116,5776,34
+26542,Hui,Ji,Ji Hui,MATJH,Mathematics,Science,Assoc Professor,56152358600,51,2065,21
+26615,Jialiang,Li,Li Jialiang,STALJ,Statistics & Applied Probability,Science,Assoc Professor,"[16834787000, 57194550800]",210,1846,23
+26829,Alexandre,Chan,"Chan, Alexandre",PHAAC,Pharmacy,Science,Assoc Professor,21739137300,139,1494,19
+27233,Jiangbin,Gong,Gong Jiangbin,PHYGJ,Physics,Science,Professor,7402707777,132,1699,24
+27954,Christoph,Winkler,"Winkler, Christoph Wolfram",DBSWCW,Biological Science,Science,Assoc Professor,7102748741,87,2910,28
+27984,Valerio,Scarani,"Scarani, Valerio",PHYSV,Physics,Science,Professor,7003674257,144,6721,43
+28062,Sangho,Kim,Kim Sangho,BIEKS,Biomedical Engineering,Engineering,Assoc Professor,55718611500,68,800,15
+28110,Chunyan,Chi,Chi Chunyan,CHMCC,Chemistry,Science,Assistant Professor,7401898831,89,3072,33
+28129,Jishan,Wu,Wu Jishan,CHMWUJ,Chemistry,Science,Assoc Professor,8077782000,211,9282,51
+28361,Ying,Chen,Chen Ying,STACHENY,Statistics & Applied Probability,Science,Assoc Professor,"[7601425634, 9240912200, 56004331800, 55734348581, 57132550800]",704,10716,55
+28967,Hwee Lin,Wee,Wee Hwee Lin,PHAWHL,Pharmacy,Science,Assistant Professor,8890187300,88,862,16
+29037,Anqi,Qiu,Qiu Anqi,BIEQA,Biomedical Engineering,Engineering,Assoc Professor,35868417900,127,2284,28
+29038,Danwei,Huang,Huang Danwei,DBSHD,Biological Science,Science,Assistant Professor,16024502400,26,452,11
+29089,Wee Han,Ang,Ang Wee Han,CHMAWH,Chemistry,Science,Assoc Professor,"[10038841100, 57195452159]",80,3293,33
+29207,Han Kiat,Ho,Ho Han Kiat,PHAHOHK,Pharmacy,Science,Assoc Professor,56446239400,64,1409,19
+29350,Shih-Hsien,Yu,Yu Shih-Hsien,MATYSH,Mathematics,Science,Professor,7405732363,39,737,14
+29447,Meng Chwan,Tan,Tan Meng Chwan,PHYTMC,Physics,Science,Assoc Professor,24171946200,21,118,5
+29478,Yin Thai,Chan,Chan Yin Thai,CHMCHANY,Chemistry,Science,Assoc Professor,7403676283,48,1363,18
+30127,Michael,Sheetz,"Sheetz, Michael",DBSSHEET,Biological Science,Science,Professor,7103347148,336,33158,99
+30192,Andrivo,Rusydi,Andrivo Rusydi,PHYANDRI,Physics,Science,Assistant Professor,6507708145,102,1686,22
+30264,Shao Quan,Liu,Liu Shao Quan,CHMLSQ,Chemistry,Science,Assoc Professor,"[8773680000, 57194279403]",129,2278,24
+30820,Rongfeng,Sun,Sun Rongfeng,MATSR,Mathematics,Science,Assoc Professor,8278386700,23,116,7
+31157,Zhang,Chun,Zhang Chun,PHYZC,Physics,Science,Assoc Professor,55703925100,28,455,12
+31190,Fei,Han,Han Fei,MATHANF,Mathematics,Science,Assoc Professor,26664453200,18,152,7
+31198,Edward,Webb,"Webb, Edward Layman",DBSWEL,Biological Science,Science,Assoc Professor,7101663277,93,1979,24
+32156,Adrian,Roellin,"Roellin, Adrian",STAAR,Statistics & Applied Probability,Science,Assoc Professor,23490225700,23,236,8
+32189,Zhisong,Wang,Wang Zhisong,PHYWANGZ,Physics,Science,Assoc Professor,35281055700,77,1164,22
+32219,Jian,Xu,Xu Jian,DBSXJ,Biological Science,Science,Assistant Professor,"[55513410500, 8238772700, 9238541900, 7407002260, 55746382100, 7406450657, 57190782067]",721,17700,66
+32603,Wenhui,Li,Li Wenhui,PHYLWH,Physics,Science,Assistant Professor,55356802700,26,1753,11
+32776,Hwa Liang,Leo,Leo Hwa Liang,BIELHL,Biomedical Engineering,Engineering,Assoc Professor,"[6701561449, 57195520097]",100,785,16
+33697,Jie,Liu,Liu Jie,MATLJ,Mathematics,Science,Assistant Professor,"[36063498400, 36072834100, 55705951400, 13204247700, 55052343700, 57195375475]",2564,44782,83
+34529,Kai,Dieckmann,"Dieckmann, Kai",PHYDK,Physics,Science,Assoc Professor,7102953094,23,1541,14
+34652,Wee Teck,Gan,Gan Wee Teck,MATGWT,Mathematics,Science,Professor,7103165596,44,387,12
+34710,Chen Hua,Yeow,Yeow Chen Hua,BIEYCH,Biomedical Engineering,Engineering,Assistant Professor,26031818200,69,542,12
+35693,Christian,Nijhuis,"Nijhuis, Christian Albertus",CHMNCA,Chemistry,Science,Assoc Professor,6506543142,83,3068,31
+36303,Yusuke,Toyama,"Toyama, Yusuke",DBSTY,Biological Science,Science,Assistant Professor,16178828300,19,491,11
+36804,Dzmitry,Matsukevich,"Matsukevich, Dzmitry",PHYMD,Physics,Science,Assistant Professor,9742982800,69,3431,23
+37088,Ronen,Zaidel Bar,"Zaidel Bar, Ronen",BIEZBR,Biomedical Engineering,Engineering,Assistant Professor,6505802990,42,2338,17
+37661,Chen Yong James,Kah,Kah Chen Yong James,BIEKAHJ,Biomedical Engineering,Engineering,Assistant Professor,9843253400,43,607,13
+39037,Zhiqiang,Gao,Gao Zhiqiang,CHMGAOZ,Chemistry,Science,Assoc Professor,7402832644,198,6214,39
+39564,Manas,Mukherjee,"Mukherjee, Manas",PHYMUKHE,Physics,Science,Assistant Professor,23098015400,14,79,4
+39575,Jiong,Lu,Lu Jiong,CHMLUJ,Chemistry,Science,Assistant Professor,34881846300,32,1956,16
+40325,Ajay,Jasra,"Jasra, Ajay",STAJA,Statistics & Applied Probability,Science,Assoc Professor,14035658500,52,801,12
+40454,Yu,Zhao,Zhao Yu,CHMZYU,Chemistry,Science,Assistant Professor,"[37016904200, 15048944800, 57194243466]",69,1264,20
+40531,Goki,Eda,"Eda, Goki",PHYEG,Physics,Science,Assistant Professor,14028212700,89,17938,40
+40844,Min,Wu,Wu Min,DBSWUM,Biological Science,Science,Assistant Professor,"[8377053300, 55729383100, 8898742200, 57061185500]",861,15290,65
+40861,Weiqing,Ren,Ren Weiqing,MATRW,Mathematics,Science,Professor,8970845800,37,2034,17
+40970,Pakorn,Kanchanawong,"Kanchanawong, Pakorn",BIEKP,Biomedical Engineering,Engineering,Assistant Professor,14832698800,23,1346,12
+42608,Chia-Hung,Chen,Chen Chia-Hung,BIECCH,Biomedical Engineering,Engineering,Assistant Professor,33567450800,46,922,15
+42977,Hongliang,Ren,Ren Hongliang,BIERH,Biomedical Engineering,Engineering,Assistant Professor,14030501000,169,1035,16
+43196,Dong,Wang,Wang Dong,MATWD,Mathematics,Science,Assistant Professor,"[55574213939, 49662660300, 56918755400]",17,44,3
+44801,Frank,Rheindt,"Rheindt, Frank Erwin",DBSRFE,Biological Science,Science,Assistant Professor,8715404300,57,1097,15
+45513,Antonia,Monteiro,"Monteiro, Antonia Fraser",DBSFMAA,Biological Science,Science,Assoc Professor,7102146090,82,2896,28
+45549,Choon Hwai,Yap,Yap Choon Hwai,BIEYAPC,Biomedical Engineering,Engineering,Assistant Professor,35752579200,39,256,10
+45874,Steven,Kou,Steven Kou,MATSTEVE,Mathematics,Science,Professor,7102162024,29,1506,14
+46291,Hongshun,Yang,Yang Hongshun,CHMYNGHS,Chemistry,Science,Assistant Professor,"[7406558225, 57195566063]",89,1237,21
+46833,Ne-Te,Loh,Loh Ne-Te,DBSLOHN,Physics,Science,Assistant Professor,"[55266499300, 57195598981]",40,1044,16
+47178,Su Ying,Quek,Quek Su Ying,PHYQSY,Physics,Science,Assistant Professor,7102510544,49,2092,23
+47726,Timothy E,Saunders,"Saunders, Timothy Edward",DBSSTE,Biological Science,Science,Assistant Professor,35190898600,26,458,11
+47837,Yi-Chin,Toh,Toh Yi-Chin,BIETY,Biomedical Engineering,Engineering,Assistant Professor,8626145900,38,1313,15
+49568,Zhigang,Yao,Yao Zhigang,STAYZ,Statistics & Applied Probability,Science,Assistant Professor,55335343700,5,51,2
+50569,Tien Cuong,Dinh,Dinh Tien Cuong,MATDTC,Mathematics,Science,Professor,7103165019,56,626,14
+52218,Shaozhong,Ge,Ge Shaozhong,CHMGSH,Chemistry,Science,Assistant Professor,55423559800,15,575,11
+52715,Jie,Wu,Wu Jie,CHMJIE,Chemistry,Science,Assistant Professor,"[55677087681, 56953735600, 57190565320]",12,79,3
+54742,On Sun,Lau,Lau On Sun,DBSLOS,Biological Science,Science,Assistant Professor,56382797100,21,1650,16
+56059,Cheng,Li,Li Cheng,STALIC,Statistics & Applied Probability,Science,Assistant Professor,"[15046756500, 55937642100, 57192579785]",77,520,13

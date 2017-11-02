@@ -10,7 +10,7 @@ import pandas as pd
 
 
 def run():
-    df = pd.read_csv("scripts/dummypub.csv")
+    df = pd.read_csv("scripts/publication.csv")
 
     print("Beginning!")
 

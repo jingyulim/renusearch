@@ -287,10 +287,10 @@
 
       <script>
     function downloadCSV() {
-          var datacsv = [["Name", "Position", "Faculty", "Department", "H-Index", "Publications", "Citations"]];
+          var datacsv = [["Name","Position","Faculty","Department","H-Index","Publications","Citations"]];
 
           {% for qi in queue %}
-          datacsv.push(["{{ qi.researchers.name }}", "{{ qi.researchers.position }}", "{{ qi.researchers.faculty}}", "{{ qi.researchers.department }}", "{{ qi.researchers.hIndex }}", "{{ qi.researchers.numberOfPubs }}", "{{ qi.researchers.numberOfCitations }}"]);
+          datacsv.push(["{{ qi.researchers.name }}","{{ qi.researchers.position }}","{{ qi.researchers.faculty}}","{{ qi.researchers.department }}","{{ qi.researchers.hIndex }}","{{ qi.researchers.numberOfPubs }}","{{ qi.researchers.numberOfCitations }}"]);
           {% endfor %} 
 
           let csvContent = "data:text/csv;charset=utf-8,";
