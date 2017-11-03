@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^researcher/(?P<queueID>[0-9]+)/detail/(?P<persNo>[0-9]+)/$', officerResearcherProfile),
 
     # for researchers
+    url(r'researcher', researcherVerify),
     url(r'^changes', researcherChanges),
     url(r'^verified', researcherVerified)
 ]

@@ -92,6 +92,9 @@ def officerResearcherProfile(request, queueID, persNo):
 	return render(request, "userMain.html", profile)
 
 # researcher profile
+def researcherVerify(request):
+	return render(request, "researcher.html")
+
 def researcherChanges(request):
 	return render(request, "researcherChanges.html")
 
